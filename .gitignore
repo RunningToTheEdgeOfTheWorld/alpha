@@ -1,0 +1,13 @@
+*~
+*.egg-info
+*.egg
+*.eggs
+*.pyc
+.idea/*
+.cache/*
+__pycache__/*
+.python-version
+.DS_Store
+*.log
+*.ver
+atrobot/config/accounts/*.json

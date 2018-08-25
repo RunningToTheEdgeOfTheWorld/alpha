@@ -1,0 +1,8 @@
+ccxt
+websockets
+protobuf
+numpy
+pandas
+sciPy
+arch
+pyfolio
