@@ -6,3 +6,5 @@ pandas
 sciPy
 arch
 pyfolio
+pymysql
+matplotlib

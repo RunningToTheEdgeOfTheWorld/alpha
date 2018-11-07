@@ -22,11 +22,11 @@ with openc('requirements.txt', 'r') as f:
 setup(
     name='alpha',
     version='1.0.0',
-    description='Fintend quant strategy and backtesting',
+    description='quant strategy and backtesting',
     long_description=long_description,
     url='https://bitbucket.org/fintendtrading/alpha',
     author='Fintend',
-    author_email='rickzhang@fintend.com',
+    author_email='richzhangjie@gmail.com',
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',

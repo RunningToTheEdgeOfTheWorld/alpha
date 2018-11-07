@@ -1,16 +1,20 @@
-FROM pypy:3-6
+FROM python:3.6.5
+#FROM pypy:3-6
 
 # base
-RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+RUN mkdir -p ~/.pip \
+    && echo [global] > ~/.pip/pip.conf \
+    && echo index-url = https://mirrors.aliyun.com/pypi/simple/ >> ~/.pip/pip.conf \
+    && echo extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple >> ~/.pip/pip.conf \
+    && cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' >/etc/timezone \
     && apt-get update -y \
-    && apt-get install vim -y \
-    && pip install --upgrade pip
+    && pip install --upgrade pip \
+    && apt-get install vim -y
 
 # project
 COPY . /opt/project
 
 WORKDIR /opt/project
 
-RUN pip install .
-
+RUN pip install -r requirements.txt
